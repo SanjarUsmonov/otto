@@ -9,13 +9,14 @@
 $layout-color: #202020;
 $background-color: #2f2f2f;
 $text-color: #ffffff;
+$label-color: #999999;
 
 .flex {
   display: flex;
   align-items: center;
 }
 
-.navbar_linkactive{
+.navbar_linkactive {
   margin-top: 10px;
   width: 100%;
   height: 50px;
@@ -27,63 +28,87 @@ $text-color: #ffffff;
   font-size: 24px;
   background-color: $background-color;
 }
-body{
+body {
   background-color: $background-color;
 }
-section{
+section {
   display: flex;
 
-.navbar {
-  display: flex;
-  width: 20%;
-  height: 100vh;
-  background-color: $layout-color;
-  justify-content: end;
-  .navbar_menu {
-    width: 90%;
-    height: 50%;
+  .navbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    img{
-      width: 100px;
-      height: 100px;
-      margin-right: 35px;
-      margin-top: -40px;
-      margin-bottom: 30px;
-    }
-    .navbar_link {
-      margin-top: 10px;
-      width: 100%;
-      height: 50px;
-      border-radius: 16px 0 0 16px;
-      padding: 10px 40px;
-      text-decoration: none;
-      text-transform: capitalize;
-      color: $text-color;
-      font-size: 24px;
-      background-color:$layout-color;
+    width: 20%;
+    height: 100vh;
+    background-color: $layout-color;
+    justify-content: end;
+    .navbar_menu {
+      width: 90%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      img {
+        width: 100px;
+        height: 100px;
+        margin-right: 35px;
+        margin-top: -40px;
+        margin-bottom: 30px;
+      }
+      .navbar_link {
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        border-radius: 16px 0 0 16px;
+        padding: 10px 40px;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $text-color;
+        font-size: 24px;
+        background-color: $layout-color;
+      }
     }
   }
 }
-}
 // Component Navbar
-.navbar_length{
+.navbar_length {
   width: 100%;
   height: 75px;
   justify-content: end;
   padding-right: 75px;
   background-color: $layout-color;
-  .navbar_username{
+  .navbar_username {
     color: $text-color;
-    font-size:20px;
+    font-size: 20px;
     text-decoration: none;
   }
 }
 
+.tovar {
+  padding: 50px;
+  h1 {
+    font-size: 30px;
+    color: $text-color;
+  }
+  .tovar_brand {
+    display: flex;
 
-.tovar_input{
-  width: 200px;
-  height: 40px;
+    flex-direction: column;
+    label {
+      font-size: 16px;
+      padding: 10px 0;
+      color: $label-color;
+    }
+    .tovar_input {
+      width: 200px;
+      height: 40px;
+      padding-left: 8px;
+      background-color: transparent;
+      outline: none;
+      border-radius: 8px;
+      border: 1px solid $label-color;
+    }
+    .tovar_input_file{
+      background-color: $background-color;
+    }
+  }
 }
