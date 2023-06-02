@@ -3,9 +3,10 @@ import '../index'
 
 const Kategoriya = () => {
     return (
-        <div className='k'>
-            kategoriya
-        </div>
+        <div className="wrapper">
+        <h1>kategoriya</h1>
+       
+      </div>
     );
 }
 

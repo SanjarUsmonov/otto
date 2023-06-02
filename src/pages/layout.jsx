@@ -8,9 +8,9 @@ const Layout = () => {
     <>
       <Navbar />
       <section>
-        <navbar className="navbar">
+        <div className="navbar">
           <div className="navbar_menu">
-            <img src={Logo} width={100} height={100} alt="otto" />
+            <img src={Logo} width={80} height={80} alt="otto" />
             <NavLink
               className={({ isActive }) =>
                 isActive ? " navbar_linkactive" : "navbar_link"
@@ -43,8 +43,24 @@ const Layout = () => {
             >
               kategoriya
             </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? " navbar_linkactive" : "navbar_link"
+              }
+              to="manzil"
+            >
+              manzil
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? " navbar_linkactive" : "navbar_link"
+              }
+              to="buyurtma"
+            >
+              buyurtma
+            </NavLink>
           </div>
-        </navbar>
+        </div>
         <Outlet />
       </section>
     </>
