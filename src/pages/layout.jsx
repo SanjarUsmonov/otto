@@ -11,6 +11,7 @@ const Layout = () => {
         <div className="navbar">
           <div className="navbar_menu">
             <img src={Logo} width={80} height={80} alt="otto" />
+            <hr width={200} className="line"/>
             <NavLink
               className={({ isActive }) =>
                 isActive ? " navbar_linkactive" : "navbar_link"
