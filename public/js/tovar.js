@@ -42,7 +42,7 @@ function displayFile() {
 
     reader.onload = () => {
       let URL = reader.result;
-      let img = `<img src="${URL}" alt="">`;
+      let img = `<img src="${URL}" alt=""/>`;
       dragArea.innerHTML = img;
     };
     reader.readAsDataURL();
