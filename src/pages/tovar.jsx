@@ -1,4 +1,5 @@
 import React from "react";
+import MyComponent from  "../Input"
 
 const Tovar = () => {
   return <div className="wrapper">
@@ -6,8 +7,9 @@ const Tovar = () => {
     <div className="tovar_brand">
         <label >Brand nomi</label>
         <input className="tovar_input" type="text" placeholder="Nomi"/>
-        <input className="tovar_input_file" type="file" />
     </div>
+  <MyComponent/>
+
   </div>;
 };
 

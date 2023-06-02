@@ -219,3 +219,28 @@ section {
     }
   }
 }
+// Tovar
+.area{
+  height: 400px;
+  border: 3px dashed #333 ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px auto;
+  .icon{
+    font-size: 50px;
+    color: blue;
+  }
+  .text{
+    font-size: 20px;font-weight: 500;color: #000;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.area.active{
+border:  2px solid blue;
+}
