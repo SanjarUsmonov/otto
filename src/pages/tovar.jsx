@@ -8,7 +8,6 @@ const Tovar = () => {
       <div className="tovar_brand">
         <label>Brand nomi</label>
         <input className="tovar_input" type="text" placeholder="Nomi" />
-      
       </div>
 < ActionLink />
       <form className="three-selects">

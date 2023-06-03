@@ -27,7 +27,6 @@ export const ActionLink = () => {
 
   return (
     <div className="area">
-      <h1 className="flex">+</h1>
       <input className="input" type="file" onChange={onSelectFile} />
       {selectedFile && <img className="img" src={preview} />}
     </div>

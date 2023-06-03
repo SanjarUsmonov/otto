@@ -7,8 +7,12 @@ const Banner = () => {
         <h1>banner</h1>
         
         <div className="wraper-banner">
+        <div className="wrapper-banner flex">
+       <ActionLink/>
        <ActionLink/>
         </div>
+        <div/>
+      </div>
       </div>
     );
 }

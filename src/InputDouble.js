@@ -26,17 +26,9 @@ export const ActionLink = () => {
   };
 
   return (
-    <div className="wrapper-banner flex">
-      <div className="area-banner">
-        <h1 className="flex">+</h1>
-        <input className="input-banner" type="file" onChange={onSelectFile} />
-        {selectedFile && <img className="img-banner" src={preview} />}
-      </div>
-      <div className="area-banner">
-        <h1 className="flex">+</h1>
-        <input className="input-banner" type="file" onChange={onSelectFile} />
-        {selectedFile && <img className="img-banner" src={preview} />}
-      </div>
+    <div className="area-banner">
+      <input className="input-banner" type="file" onChange={onSelectFile} />
+      {selectedFile && <img className="img-banner" src={preview} />}
     </div>
   );
 };
