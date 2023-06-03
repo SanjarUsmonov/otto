@@ -1,10 +1,28 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "../index";
- const Kategoriya = () => {
+import axios from "axios";
+const Kategoriya = () => {
   const [selectedFile, setSelectedFile] = useState();
   const [preview, setPreview] = useState();
+  const [file, setFile] = useState(null);
 
+  const handleFileChange = (event) => {
+    setFile(event.target.files);
+    console.log(file);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData();
+    for (var x = 0; x < file; x++) {
+      data.append("file", file[x]);
+    }
+    axios.post("http://localhost:4000/category/image", data).then((res) => {
+      console.log(res.statusText);
+    });
+  };
+  
   useEffect(() => {
     if (!selectedFile) {
       setPreview(undefined);
@@ -29,12 +47,23 @@ import "../index";
   return (
     <div className="wrapper">
       <h1>kategoriya</h1>
-      <form className="area"  action="http://localhost:4000/category"
-        method="post"> 
-      <input className="input" type="file" onChange={onSelectFile} />
-      {selectedFile && <img className="img image" src={preview} alt=""/>}
-        <input className="submit" type="submit" />
-    </form>
+
+      <div>
+        <form className="area form">
+          <input
+            className="input"
+            type="file"
+            id="file"
+            name="image"
+            multiple
+            onChange={handleFileChange && onSelectFile}
+            />
+            {selectedFile && <img className="img" src={preview} alt=""/>}
+
+          <input className="submit" onClick={handleSubmit} type="submit" />
+        </form>
+
+      </div>
       <form
         className="three-selects"
         action="http://localhost:4000/category"

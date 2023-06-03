@@ -226,7 +226,6 @@ section {
   width: 990px;
   margin: 10px auto;
   position: relative;
-
   .input {
     width: 300px;
     height: 300px;
@@ -292,7 +291,7 @@ section {
       }
     }
   }
-
+  
   .input{
     width: 300px;
     height: 50px;
@@ -305,25 +304,40 @@ section {
   }
   .submit{
     margin-top: 45px;
+    background-color: $layout-color;
+    border: $layout-color;
   }
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .img{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+    left: 0;
+    height: 300px;
+  }
+}
 // Banner
 .wrapper-banner{
   width: 990px;
-.area-banner {
-  width: 990px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px auto;
-  position: relative;
-
-  .input-banner {
-    width: 450px;
-    height: 300px;
-    color: $layout-color;
-    background-color: $layout-color;
+  .area-banner {
+    width: 990px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+    position: relative;
+    
+    .input-banner {
+      width: 450px;
+      height: 300px;
+      color: $layout-color;
+      background-color: $layout-color;
     border-radius: 10px;
     position: relative;
   }
