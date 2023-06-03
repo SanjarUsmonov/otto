@@ -1,38 +1,35 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import "./index";
+export const ActionLink = () => {
+  const [selectedFile, setSelectedFile] = useState();
+  const [preview, setPreview] = useState();
 
-export default class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
+  useEffect(() => {
+    if (!selectedFile) {
+      setPreview(undefined);
+      return;
+    }
 
-    this.inputRef = React.createRef();
-    // this.inputRef.current is null here
-  }
+    const objectUrl = URL.createObjectURL(selectedFile);
+    setPreview(objectUrl);
 
-  componentDidMount() {
-    // we can use this.inputRef.current to access DOM element
-  }
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [selectedFile]);
 
-  componentDidUpdate() {
-    // we can use this.inputRef.current to access DOM element
-  }
+  const onSelectFile = (e) => {
+    if (!e.target.files || e.target.files.length === 0) {
+      setSelectedFile(undefined);
+      return;
+    }
 
-  handleClick = () => {
-    // we can use this.inputRef.current to access DOM element
-    this.inputRef.current.focus();
+    setSelectedFile(e.target.files[0]);
   };
 
-  render() {
-    return (
-      <div className="area">
-        <div className="icon">
-          <h1>+</h1>
-        </div>
-        <span className="header">DRAG or DROP</span>
-        <span className="header">
-          or<span className="button">Browser</span>
-        </span>
-        <input type="file" hidden />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="area">
+      <h1 className="flex">+</h1>
+      <input className="input" type="file" onChange={onSelectFile} />
+      {selectedFile && <img className="img" src={preview} />}
+    </div>
+  );
+};
