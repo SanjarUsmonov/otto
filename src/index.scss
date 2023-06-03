@@ -1,21 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap");
+// All styles
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Montserrat;
 }
-
+// Root colors
 $layout-color: #202020;
 $background-color: #2f2f2f;
 $text-color: #ffffff;
 $label-color: #999999;
-
+// Flex
 .flex {
   display: flex;
   align-items: center;
 }
-
+// Navbar
 .navbar_linkactive {
   margin-top: 10px;
   width: 100%;
@@ -28,12 +29,12 @@ $label-color: #999999;
   font-size: 20px;
   background-color: $background-color;
 }
+// Body
 body {
   background-color: $background-color;
 }
 section {
   display: flex;
-
   .navbar {
     display: flex;
     width: 20%;
@@ -81,12 +82,13 @@ section {
   padding-right: 75px;
   background-color: $layout-color;
   .navbar_username {
+    width: 19%;
     color: $text-color;
     font-size: 20px;
     text-decoration: none;
   }
 }
-
+// Wrapper
 .wrapper {
   padding: 50px;
   h1 {
@@ -221,7 +223,7 @@ section {
 }
 // Tovar
 .area {
-  border: 3px dashed #333;
+  width: 990px;
   margin: 10px auto;
   position: relative;
   h1 {
@@ -268,7 +270,7 @@ section {
       label {
         font-size: 16px;
         color: $label-color;
-        margin: 10px 0;
+        margin: 20px 0;
       }
       .input {
         height: 50px;
@@ -295,15 +297,49 @@ section {
   }
 
   .input{
- width: 300px;
+    width: 300px;
     height: 50px;
     padding-left: 8px;
-    margin-top: 40px;
     background-color: transparent;
     color: $text-color;
     outline: none;
     border-radius: 8px;
     border: 1px solid $label-color;
   }
-  
+  .submit{
+    margin-top: 45px;
+  }
+}
+
+// Banner
+.wrapper-banner{
+  width: 990px;
+.area-banner {
+  width: 990px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+  position: relative;
+  h1 {
+    justify-content: center;
+    font-size: 90px;
+    position: absolute;
+    width: 80%;
+    background-color: transparent;
+  }
+  .input-banner {
+    margin-top: 20px;
+    width:400px;
+    height: 300px;
+    color: transparent;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 3px solid $label-color;
+  }
+  .img-banner {
+    width: 100%;
+    height: 100%;
+  }
+}
 }

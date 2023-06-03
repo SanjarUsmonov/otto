@@ -96,7 +96,7 @@ const Tovar = () => {
             ></textarea>
           </div>
         </div>
-        <input className="input" type="submit" />
+        <input className="input submit" type="submit" />
         
       </form>
 
