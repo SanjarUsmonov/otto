@@ -54,11 +54,10 @@ const Kategoriya = () => {
             className="input"
             type="file"
             id="file"
-            name="image"
             multiple
-            onChange={handleFileChange && onSelectFile}
+            onChange={handleFileChange}
             />
-            {selectedFile && <img className="img" src={preview} alt=""/>}
+            {/* {selectedFile && <img className="img" src={preview} alt=""/>} */}
 
           <input className="submit" onClick={handleSubmit} type="submit" />
         </form>
